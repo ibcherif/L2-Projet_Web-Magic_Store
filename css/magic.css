@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+
+    background-image: url("../images/MagicBG2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    color:white;
+    font-family: 'Pirata One', cursive;
+    letter-spacing: 0.2em ;
+
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.nav-content{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    letter-spacing: 0.1em;
+}
+
+#main-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 3em;
+}
+
+.browser{
+    width: 100%;
+    height: 100%;
+    padding: 5px 0px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.browser header{
+    width: 80%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.browser header button{
+    margin-right: 20px;
+}
+
+.browser-content-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.browser-content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.browser-content, .browser header{
+    width: 90%;
+}
+
+.magic-card{
+    margin: 5px;
+    padding: 10px 10px 3px 10px;
+    background: linear-gradient(30deg, black, transparent);
+    border: 1px solid black;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.magic-card img{
+    width: 180px;
+
+}
+.magic-card legend{
+    width: 180px;
+    height: 100%;
+    margin: 0;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+}
+.magic-card label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.magic-card input{
+    max-width: 2.5em;
+    text-align: right;
+    flex-shrink: 0;
+
+}
+
+.magic-card.selected{
+    background: linear-gradient(30deg, darkorange, transparent);;
+    border-color: black;
+}
+
+.magic-card.edited{
+    background: linear-gradient(30deg, red, transparent);;
+    border-color: black;
+}
+#nameLegend{
+    color:white;
+}
+
+@media screen and (max-height: 600px) {
+    #main-content > img{
+        height: 60%;
+    }
+
+    .magic-card img, .magic-card legend{
+        width: 160px;
+    }
+
+    footer{
+        font-size: 0.7em;
+    }
+}
+
+#login-form, #error{
+    width: 300px;
+}
+
+#login-form{
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: black;
+}
+#login-form *{
+    width: 100%;
+    margin: 8px 0;
+}
+
+#error{
+    margin: 5px 0;
+    background: white;
+    padding: 0 10px ;
+    font-size: 1.8em;
+    color: orangered;
+    text-align: center;
+}
